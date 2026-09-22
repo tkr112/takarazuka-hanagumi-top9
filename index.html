@@ -6,679 +6,698 @@
 <title>花組 好き顔9選</title>
 
 <style>
-* {
-  box-sizing: border-box;
+*{box-sizing:border-box}
+
+html,body{
+  margin:0;
+  padding:0;
+  min-height:100%;
 }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  min-height: 100%;
-}
-
-body {
-  font-family:
-    -apple-system,
-    BlinkMacSystemFont,
-    "Hiragino Kaku Gothic ProN",
-    "Yu Gothic",
-    sans-serif;
-  color: #513943;
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  color:#513943;
   background:
-    radial-gradient(circle at 10% 8%, rgba(244,180,203,.22), transparent 24%),
-    radial-gradient(circle at 90% 35%, rgba(250,210,223,.28), transparent 25%),
-    linear-gradient(180deg, #fffdfd 0%, #fff7fa 50%, #fff0f5 100%);
-  min-height: 100vh;
+    radial-gradient(circle at 10% 8%,rgba(244,180,203,.22),transparent 24%),
+    radial-gradient(circle at 90% 35%,rgba(250,210,223,.28),transparent 25%),
+    linear-gradient(180deg,#fffdfd 0%,#fff7fa 50%,#fff0f5 100%);
+  min-height:100vh;
 }
 
-button {
-  font-family: inherit;
+button{font-family:inherit}
+
+.app{
+  width:min(100%,620px);
+  margin:0 auto;
+  min-height:100vh;
+  padding:15px 14px 35px;
+  position:relative;
+  overflow:hidden;
 }
 
-.app {
-  width: min(100%, 620px);
-  margin: 0 auto;
-  min-height: 100vh;
-  padding: 18px 14px 35px;
-  position: relative;
-  overflow: hidden;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
+.content{
+  position:relative;
+  z-index:2;
 }
 
 /* =========================
-   CSSで描く花
+   背景のお花
 ========================= */
 
-.decor-flower {
-  position: fixed;
-  width: 120px;
-  height: 120px;
-  opacity: .12;
-  pointer-events: none;
-  z-index: 0;
+.decor-flower{
+  position:fixed;
+  width:120px;
+  height:120px;
+  opacity:.10;
+  pointer-events:none;
+  z-index:0;
 }
 
 .decor-flower::before,
 .decor-flower::after,
 .decor-flower span::before,
 .decor-flower span::after,
-.decor-flower span {
-  content: "";
-  position: absolute;
-  width: 48px;
-  height: 70px;
-  left: 36px;
-  top: 25px;
-  border-radius: 55% 55% 48% 48%;
-  background: #e98eae;
-  transform-origin: 50% 35px;
+.decor-flower span{
+  content:"";
+  position:absolute;
+  width:48px;
+  height:70px;
+  left:36px;
+  top:25px;
+  border-radius:55% 55% 48% 48%;
+  background:#e98eae;
+  transform-origin:50% 35px;
 }
 
-.decor-flower::before {
-  transform: rotate(0deg) translateY(-22px);
+.decor-flower::before{transform:rotate(0deg) translateY(-22px)}
+.decor-flower::after{transform:rotate(72deg) translateY(-22px)}
+.decor-flower span::before{transform:rotate(144deg) translateY(-22px)}
+.decor-flower span::after{transform:rotate(216deg) translateY(-22px)}
+.decor-flower span{transform:rotate(288deg) translateY(-22px)}
+
+.flower-a{
+  top:3%;
+  left:-45px;
+  transform:rotate(-15deg);
 }
 
-.decor-flower::after {
-  transform: rotate(72deg) translateY(-22px);
+.flower-b{
+  top:40%;
+  right:-48px;
+  transform:rotate(18deg) scale(.85);
 }
 
-.decor-flower span::before {
-  transform: rotate(144deg) translateY(-22px);
-}
-
-.decor-flower span::after {
-  transform: rotate(216deg) translateY(-22px);
-}
-
-.decor-flower span {
-  transform: rotate(288deg) translateY(-22px);
-}
-
-.flower-a {
-  top: 3%;
-  left: -45px;
-  transform: rotate(-15deg);
-}
-
-.flower-b {
-  top: 40%;
-  right: -48px;
-  transform: rotate(18deg) scale(.85);
-}
-
-.flower-c {
-  bottom: 2%;
-  left: -45px;
-  transform: rotate(14deg) scale(1.1);
+.flower-c{
+  bottom:2%;
+  left:-45px;
+  transform:rotate(14deg) scale(1.1);
 }
 
 /* =========================
    ヘッダー
 ========================= */
 
-.header {
-  text-align: center;
-  padding: 18px 10px 20px;
+.header{
+  text-align:center;
+  padding:14px 10px 16px;
 }
 
-.eyebrow {
-  color: #c97996;
-  font-family: Georgia, serif;
-  letter-spacing: .22em;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: 9px;
+.eyebrow{
+  color:#c97996;
+  font-family:Georgia,serif;
+  letter-spacing:.22em;
+  font-size:11px;
+  font-weight:700;
+  margin-bottom:7px;
 }
 
-.title {
-  margin: 0;
-  font-size: 31px;
-  line-height: 1.25;
-  font-weight: 900;
-  color: #573843;
-  letter-spacing: .02em;
+.title{
+  margin:0;
+  font-size:29px;
+  line-height:1.25;
+  font-weight:900;
+  color:#573843;
 }
 
-.title-number {
-  color: #df6d97;
+.title-number{
+  color:#df6d97;
 }
 
-.title-decoration {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  margin: 15px auto 0;
+.title-decoration{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:13px;
+  margin:12px auto 0;
 }
 
 .title-decoration::before,
-.title-decoration::after {
-  content: "";
-  display: block;
-  width: 95px;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #e7a2ba);
+.title-decoration::after{
+  content:"";
+  width:85px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#e7a2ba);
 }
 
-.title-decoration::after {
-  background: linear-gradient(90deg, #e7a2ba, transparent);
-}
-
-.mini-flower {
-  position: relative;
-  width: 18px;
-  height: 18px;
-}
-
-.mini-flower i {
-  position: absolute;
-  left: 7px;
-  top: 1px;
-  width: 5px;
-  height: 9px;
-  background: #df7ca0;
-  border-radius: 60%;
-  transform-origin: 2.5px 8px;
-}
-
-.mini-flower i:nth-child(1) { transform: rotate(0deg); }
-.mini-flower i:nth-child(2) { transform: rotate(72deg); }
-.mini-flower i:nth-child(3) { transform: rotate(144deg); }
-.mini-flower i:nth-child(4) { transform: rotate(216deg); }
-.mini-flower i:nth-child(5) { transform: rotate(288deg); }
-
-/* =========================
-   共通パネル
-========================= */
-
-.panel {
-  background: rgba(255,255,255,.88);
-  border: 1px solid rgba(234,177,198,.48);
-  border-radius: 28px;
-  padding: 18px;
-  box-shadow: 0 16px 45px rgba(190,95,131,.10);
-  backdrop-filter: blur(8px);
+.title-decoration::after{
+  background:linear-gradient(90deg,#e7a2ba,transparent);
 }
 
 /* =========================
-   ホーム
+   小さいお花
 ========================= */
 
-.home {
-  text-align: center;
-  padding: 30px 18px 32px;
+.mini-flower{
+  position:relative;
+  width:18px;
+  height:18px;
 }
 
-.home-flower {
-  width: 76px;
-  height: 76px;
-  margin: 0 auto 18px;
-  position: relative;
+.mini-flower i{
+  position:absolute;
+  left:7px;
+  top:1px;
+  width:5px;
+  height:9px;
+  background:#df7ca0;
+  border-radius:70% 70% 60% 60%;
+  transform-origin:2.5px 8px;
 }
 
-.home-flower .petal {
-  position: absolute;
-  width: 29px;
-  height: 42px;
-  left: 24px;
-  top: 6px;
-  background: linear-gradient(180deg,#f4adc5,#e980a5);
-  border-radius: 60% 60% 50% 50%;
-  transform-origin: 14px 32px;
+.mini-flower i:nth-child(1){transform:rotate(0deg)}
+.mini-flower i:nth-child(2){transform:rotate(72deg)}
+.mini-flower i:nth-child(3){transform:rotate(144deg)}
+.mini-flower i:nth-child(4){transform:rotate(216deg)}
+.mini-flower i:nth-child(5){transform:rotate(288deg)}
+
+/* =========================
+   ステップ表示
+========================= */
+
+.stepper{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  margin:4px 5px 18px;
+  position:relative;
 }
 
-.home-flower .petal:nth-child(1) { transform: rotate(0deg); }
-.home-flower .petal:nth-child(2) { transform: rotate(72deg); }
-.home-flower .petal:nth-child(3) { transform: rotate(144deg); }
-.home-flower .petal:nth-child(4) { transform: rotate(216deg); }
-.home-flower .petal:nth-child(5) { transform: rotate(288deg); }
-
-.home-flower .center {
-  position: absolute;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: #f6d6df;
-  left: 30px;
-  top: 29px;
-  z-index: 2;
+.stepper::before{
+  content:"";
+  position:absolute;
+  top:18px;
+  left:12%;
+  right:12%;
+  height:3px;
+  background:#f0dce4;
+  z-index:0;
 }
 
-.home h2 {
-  font-size: 26px;
-  margin: 0 0 15px;
-  color: #553640;
+.step{
+  width:25%;
+  text-align:center;
+  position:relative;
+  z-index:1;
 }
 
-.home p {
-  margin: 0 auto;
-  max-width: 390px;
-  font-size: 14px;
-  line-height: 1.9;
-  color: #896773;
+.step-circle{
+  width:36px;
+  height:36px;
+  margin:0 auto 7px;
+  border-radius:50%;
+  background:#f4e3e9;
+  color:#bd91a1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+  font-weight:900;
+  border:3px solid #fff;
+  box-shadow:0 2px 7px rgba(170,90,120,.08);
 }
 
-.flow {
-  margin: 25px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 7px;
+.step-label{
+  font-size:11px;
+  font-weight:900;
+  color:#bd91a1;
 }
 
-.flow span {
-  padding: 7px 11px;
-  background: #fff1f6;
-  border: 1px solid #f0c4d4;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 800;
-  color: #c55f85;
+.step.active .step-circle,
+.step.done .step-circle{
+  background:#e95d91;
+  color:#fff;
 }
 
-.flow b {
-  color: #dda0b6;
-  font-weight: 500;
+.step.active .step-label,
+.step.done .step-label{
+  color:#dc5e8d;
+}
+
+.step.active .step-circle{
+  box-shadow:0 0 0 4px rgba(233,93,145,.12);
 }
 
 /* =========================
-   ボタン
+   共通
 ========================= */
 
-.primary-button {
-  border: 0;
-  width: 100%;
-  max-width: 390px;
-  min-height: 56px;
-  border-radius: 18px;
-  background: linear-gradient(135deg,#eb85a9,#d85e8a);
-  color: #fff;
-  font-size: 16px;
-  font-weight: 900;
-  box-shadow: 0 10px 25px rgba(211,85,132,.22);
-  cursor: pointer;
+.panel{
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(234,177,198,.48);
+  border-radius:28px;
+  padding:18px;
+  box-shadow:0 16px 45px rgba(190,95,131,.10);
+  backdrop-filter:blur(8px);
 }
 
-.primary-button:active {
-  transform: scale(.985);
+.home{
+  text-align:center;
+  padding:30px 18px 32px;
 }
 
-.secondary-button {
-  border: 1px solid #efbfd0;
-  background: #fff;
-  color: #c25d83;
-  width: 100%;
-  min-height: 50px;
-  border-radius: 16px;
-  font-weight: 800;
-  font-size: 14px;
-  cursor: pointer;
+.home-flower{
+  width:76px;
+  height:76px;
+  margin:0 auto 18px;
+  position:relative;
+}
+
+.home-flower .petal{
+  position:absolute;
+  width:29px;
+  height:42px;
+  left:24px;
+  top:6px;
+  background:linear-gradient(180deg,#f4adc5,#e980a5);
+  border-radius:65% 65% 52% 52%;
+  transform-origin:14px 32px;
+}
+
+.home-flower .petal:nth-child(1){transform:rotate(0deg)}
+.home-flower .petal:nth-child(2){transform:rotate(72deg)}
+.home-flower .petal:nth-child(3){transform:rotate(144deg)}
+.home-flower .petal:nth-child(4){transform:rotate(216deg)}
+.home-flower .petal:nth-child(5){transform:rotate(288deg)}
+
+.home-flower .center{
+  position:absolute;
+  width:17px;
+  height:17px;
+  border-radius:50%;
+  background:#f8dce4;
+  left:30px;
+  top:29px;
+  z-index:2;
+}
+
+.home h2{
+  font-size:26px;
+  margin:0 0 15px;
+}
+
+.home p{
+  margin:0 auto;
+  max-width:390px;
+  font-size:14px;
+  line-height:1.9;
+  color:#896773;
+}
+
+.flow{
+  margin:25px auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.flow span{
+  padding:7px 11px;
+  background:#fff1f6;
+  border:1px solid #f0c4d4;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  color:#c55f85;
+}
+
+.flow b{
+  color:#dda0b6;
+  font-weight:500;
+}
+
+.primary-button{
+  border:0;
+  width:100%;
+  min-height:54px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#eb85a9,#d85e8a);
+  color:#fff;
+  font-size:16px;
+  font-weight:900;
+  box-shadow:0 10px 25px rgba(211,85,132,.22);
+  cursor:pointer;
+}
+
+.secondary-button{
+  border:1px solid #efbfd0;
+  background:#fff;
+  color:#c25d83;
+  width:100%;
+  min-height:50px;
+  border-radius:16px;
+  font-weight:800;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.button-row{
+  display:grid;
+  grid-template-columns:100px 1fr;
+  gap:8px;
+}
+
+.primary-button:active,
+.secondary-button:active{
+  transform:scale(.985);
+}
+
+.progress-wrap{
+  margin-bottom:13px;
+}
+
+.progress-info{
+  display:flex;
+  justify-content:space-between;
+  margin:0 3px 8px;
+  color:#a36a7e;
+  font-size:12px;
+  font-weight:800;
+}
+
+.progress-track{
+  width:100%;
+  height:7px;
+  background:#f6dce5;
+  border-radius:999px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  height:100%;
+  background:linear-gradient(90deg,#efa2bc,#db658f);
+  border-radius:999px;
+}
+
+.stage-title{
+  text-align:center;
+  margin:7px 0 5px;
+  font-size:21px;
+  font-weight:900;
+}
+
+.stage-subtitle{
+  text-align:center;
+  margin:0 0 14px;
+  font-size:12px;
+  color:#a17484;
 }
 
 /* =========================
-   進捗
+   人物カード
 ========================= */
 
-.progress-wrap {
-  margin-bottom: 13px;
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
 }
 
-.progress-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 3px 8px;
-  color: #a36a7e;
-  font-size: 12px;
-  font-weight: 800;
+.member-card{
+  position:relative;
+  border:1px solid rgba(236,183,202,.58);
+  background:#fff;
+  border-radius:17px;
+  padding:6px 6px 9px;
+  box-shadow:0 6px 17px rgba(174,91,123,.08);
+  cursor:pointer;
+  transition:.15s;
 }
 
-.progress-track {
-  width: 100%;
-  height: 7px;
-  background: #f6dce5;
-  border-radius: 999px;
-  overflow: hidden;
+.member-card.selected{
+  border:2px solid #e26693;
+  background:#fff6f9;
+  transform:translateY(-2px);
 }
 
-.progress-bar {
-  height: 100%;
-  background: linear-gradient(90deg,#efa2bc,#db658f);
-  border-radius: 999px;
-  transition: width .25s ease;
+.member-photo{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:12px;
+  display:block;
+  background:#f8e8ed;
 }
 
-.stage-title {
-  text-align: center;
-  margin: 7px 0 5px;
-  font-size: 21px;
-  font-weight: 900;
-}
-
-.stage-subtitle {
-  text-align: center;
-  margin: 0 0 14px;
-  font-size: 12px;
-  color: #a17484;
-  line-height: 1.6;
+.member-name{
+  font-size:11px;
+  line-height:1.35;
+  font-weight:800;
+  text-align:center;
+  margin-top:7px;
+  color:#57404a;
+  min-height:30px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
 /* =========================
-   メンバーカード
+   新しい選択花
 ========================= */
 
-.member-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 9px;
+.selected-flower{
+  display:none;
+  position:absolute;
+  right:-7px;
+  top:-7px;
+  width:35px;
+  height:35px;
+  z-index:4;
+  filter:drop-shadow(0 3px 4px rgba(179,72,111,.18));
 }
 
-.member-card {
-  position: relative;
-  border: 1px solid rgba(236,183,202,.58);
-  background: #fff;
-  border-radius: 17px;
-  padding: 6px 6px 9px;
-  box-shadow: 0 6px 17px rgba(174,91,123,.08);
-  cursor: pointer;
-  transition: .15s ease;
-  overflow: visible;
+.member-card.selected .selected-flower{
+  display:block;
 }
 
-.member-card.selected {
-  border: 2px solid #e26693;
-  background: #fff6f9;
-  transform: translateY(-2px);
+.selected-flower span{
+  position:absolute;
+  left:12px;
+  top:4px;
+  width:11px;
+  height:16px;
+  border-radius:70% 70% 60% 60%;
+  background:linear-gradient(180deg,#ffb7cf,#e86796);
+  transform-origin:5.5px 13px;
+  border:1px solid rgba(255,255,255,.7);
 }
 
-.member-photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 12px;
-  display: block;
-  background: #f8e8ed;
+.selected-flower span:nth-child(1){transform:rotate(0deg)}
+.selected-flower span:nth-child(2){transform:rotate(72deg)}
+.selected-flower span:nth-child(3){transform:rotate(144deg)}
+.selected-flower span:nth-child(4){transform:rotate(216deg)}
+.selected-flower span:nth-child(5){transform:rotate(288deg)}
+
+.selected-flower::after{
+  content:"";
+  position:absolute;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#fff0b9;
+  left:13.5px;
+  top:13px;
+  z-index:3;
 }
 
-.member-name {
-  font-size: 11px;
-  line-height: 1.35;
-  font-weight: 800;
-  text-align: center;
-  margin-top: 7px;
-  color: #57404a;
-  min-height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.bottom-actions{
+  position:sticky;
+  bottom:8px;
+  margin-top:14px;
+  padding:10px;
+  border-radius:20px;
+  background:rgba(255,249,252,.94);
+  border:1px solid rgba(239,190,207,.7);
+  backdrop-filter:blur(10px);
+  box-shadow:0 8px 30px rgba(177,87,122,.13);
+  z-index:10;
 }
 
-/* 選択マークも文字ではなく花 */
-
-.selected-mark {
-  display: none;
-  position: absolute;
-  top: -5px;
-  right: -5px;
-  width: 31px;
-  height: 31px;
-  border-radius: 50%;
-  background: #e26693;
-  border: 2px solid #fff;
-  box-shadow: 0 4px 10px rgba(180,70,112,.2);
-  z-index: 5;
-}
-
-.member-card.selected .selected-mark {
-  display: block;
-}
-
-.selected-mark i {
-  position: absolute;
-  width: 5px;
-  height: 10px;
-  left: 11px;
-  top: 4px;
-  border-radius: 60%;
-  background: #fff;
-  transform-origin: 2.5px 10px;
-}
-
-.selected-mark i:nth-child(1) { transform: rotate(0deg); }
-.selected-mark i:nth-child(2) { transform: rotate(72deg); }
-.selected-mark i:nth-child(3) { transform: rotate(144deg); }
-.selected-mark i:nth-child(4) { transform: rotate(216deg); }
-.selected-mark i:nth-child(5) { transform: rotate(288deg); }
-
-.bottom-actions {
-  position: sticky;
-  bottom: 8px;
-  margin-top: 14px;
-  padding: 10px;
-  border-radius: 20px;
-  background: rgba(255,249,252,.94);
-  border: 1px solid rgba(239,190,207,.7);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 8px 30px rgba(177,87,122,.13);
-  z-index: 10;
-}
-
-.selection-count {
-  text-align: center;
-  color: #af607d;
-  font-size: 12px;
-  font-weight: 800;
-  margin-bottom: 8px;
+.selection-count{
+  text-align:center;
+  color:#af607d;
+  font-size:12px;
+  font-weight:800;
+  margin-bottom:8px;
 }
 
 /* =========================
    2択
 ========================= */
 
-.compare-wrap {
-  padding: 10px 12px 18px;
+.compare-wrap{
+  padding:10px 12px 18px;
 }
 
-.compare-decoration {
-  margin: 10px auto 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
+.compare-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:17px;
 }
 
-.compare-decoration::before,
-.compare-decoration::after {
-  content: "";
-  width: 55px;
-  height: 1px;
-  background: #edbfd0;
+.compare-card{
+  border:1px solid #efc5d4;
+  border-radius:22px;
+  background:#fff;
+  padding:8px 8px 13px;
+  box-shadow:0 10px 28px rgba(178,93,126,.10);
+  cursor:pointer;
 }
 
-.compare-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
+.compare-card:active{
+  transform:scale(.985);
 }
 
-.compare-card {
-  border: 1px solid #efc5d4;
-  border-radius: 22px;
-  background: #fff;
-  padding: 8px 8px 13px;
-  box-shadow: 0 10px 28px rgba(178,93,126,.10);
-  cursor: pointer;
+.compare-photo{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:16px;
+  display:block;
 }
 
-.compare-card:active {
-  transform: scale(.985);
-}
-
-.compare-photo {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 16px;
-  display: block;
-}
-
-.compare-name {
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  font-weight: 900;
-  color: #543943;
+.compare-name{
+  text-align:center;
+  margin-top:10px;
+  font-size:14px;
+  font-weight:900;
 }
 
 /* =========================
    結果
 ========================= */
 
-.result-heading {
-  text-align: center;
-  padding: 7px 0 18px;
+.result-heading{
+  text-align:center;
+  padding:7px 0 18px;
 }
 
-.result-heading h2 {
-  margin: 0;
-  font-size: 27px;
-  color: #593844;
+.result-heading h2{
+  margin:0;
+  font-size:27px;
 }
 
-.result-decoration {
-  width: 120px;
-  height: 1px;
-  background: linear-gradient(90deg,transparent,#e497b3,transparent);
-  margin: 14px auto 0;
+.result-decoration{
+  width:120px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#e497b3,transparent);
+  margin:14px auto 0;
 }
 
-.result-grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 10px;
+.result-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
 }
 
-.result-card {
-  position: relative;
-  background: #fff;
-  border: 1px solid #f0ccd8;
-  border-radius: 18px;
-  padding: 7px 7px 10px;
-  box-shadow: 0 7px 20px rgba(175,89,122,.09);
+.result-card{
+  position:relative;
+  background:#fff;
+  border:1px solid #f0ccd8;
+  border-radius:18px;
+  padding:7px 7px 10px;
+  box-shadow:0 7px 20px rgba(175,89,122,.09);
 }
 
-.result-card img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 13px;
-  display: block;
+.result-card img{
+  width:100%;
+  aspect-ratio:3/4;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:13px;
+  display:block;
 }
 
-.rank-badge {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-18%,-18%);
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  border: 2px solid #fff;
-  background: #df6b96;
-  box-shadow: 0 4px 10px rgba(137,64,91,.18);
-  z-index: 2;
+.rank-badge{
+  position:absolute;
+  top:0;
+  left:0;
+  transform:translate(-18%,-18%);
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:13px;
+  font-weight:900;
+  border:2px solid #fff;
+  z-index:2;
 }
 
-.result-name {
-  text-align: center;
-  font-size: 11px;
-  font-weight: 900;
-  color: #533b44;
-  margin-top: 7px;
-  min-height: 29px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.result-name{
+  text-align:center;
+  font-size:11px;
+  font-weight:900;
+  margin-top:7px;
+  min-height:29px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.result-buttons {
-  display: grid;
-  gap: 10px;
-  margin-top: 18px;
+.result-buttons{
+  display:grid;
+  gap:10px;
+  margin-top:18px;
 }
 
 /* =========================
-   保存画像モーダル
+   モーダル
 ========================= */
 
-.modal {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background: rgba(67,40,50,.55);
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:100;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:rgba(67,40,50,.55);
 }
 
-.modal.show {
-  display: flex;
+.modal.show{
+  display:flex;
 }
 
-.modal-box {
-  width: min(100%,430px);
-  max-height: 90vh;
-  overflow: auto;
-  border-radius: 24px;
-  background: #fff;
-  padding: 17px;
-  box-shadow: 0 20px 60px rgba(0,0,0,.2);
+.modal-box{
+  width:min(100%,430px);
+  max-height:90vh;
+  overflow:auto;
+  border-radius:24px;
+  background:#fff;
+  padding:17px;
 }
 
-.modal-box img {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
+.modal-box img{
+  width:100%;
+  border-radius:16px;
+  display:block;
 }
 
-.modal-actions {
-  display: grid;
-  gap: 9px;
-  margin-top: 12px;
+.modal-actions{
+  display:grid;
+  gap:9px;
+  margin-top:12px;
 }
 
-@media(max-width:380px) {
-  .app {
-    padding-left: 10px;
-    padding-right: 10px;
+@media(max-width:380px){
+  .app{
+    padding-left:10px;
+    padding-right:10px;
   }
 
-  .title {
-    font-size: 27px;
-  }
-
-  .member-grid {
-    gap: 6px;
-  }
-
-  .member-name {
-    font-size: 10px;
-  }
+  .title{font-size:27px}
+  .member-grid{gap:6px}
+  .member-name{font-size:10px}
+  .step-label{font-size:10px}
 }
 </style>
 </head>
@@ -690,34 +709,33 @@ button {
 <div class="decor-flower flower-c"><span></span></div>
 
 <div class="app">
-  <div class="content">
+<div class="content">
 
-    <header class="header">
-      <div class="eyebrow">HANA-GUMI TOP 9</div>
+<header class="header">
+  <div class="eyebrow">HANA-GUMI TOP 9</div>
 
-      <h1 class="title">
-        花組 好き顔<span class="title-number">9選</span>
-      </h1>
+  <h1 class="title">
+    花組 好き顔<span class="title-number">9選</span>
+  </h1>
 
-      <div class="title-decoration">
-        <div class="mini-flower">
-          <i></i><i></i><i></i><i></i><i></i>
-        </div>
-      </div>
-    </header>
-
-    <main id="app"></main>
-
+  <div class="title-decoration">
+    <div class="mini-flower">
+      <i></i><i></i><i></i><i></i><i></i>
+    </div>
   </div>
+</header>
+
+<div id="steps"></div>
+<main id="app"></main>
+
+</div>
 </div>
 
 <div class="modal" id="imageModal">
   <div class="modal-box">
-
     <img id="generatedImage" alt="花組 好き顔9選">
 
     <div class="modal-actions">
-
       <button class="primary-button" id="shareImageButton">
         画像を保存・共有
       </button>
@@ -725,7 +743,6 @@ button {
       <button class="secondary-button" id="closeModalButton">
         閉じる
       </button>
-
     </div>
   </div>
 </div>
@@ -734,118 +751,142 @@ button {
 
 <script>
 
-/* =========================
-   設定
-========================= */
-
-const SAVE_KEY = "hanagumiTop9StateV2";
-
+const SAVE_KEY = "hanagumiTop9StateV3";
 const PAGE_SIZE = 9;
 const NARROW_SIZE = 4;
 const FINAL_COUNT = 9;
 
 const app = document.getElementById("app");
+const steps = document.getElementById("steps");
 
 let state = createInitialState();
 
 
-function createInitialState() {
-  return {
-    stage: "home",
+function createInitialState(){
+  return{
+    stage:"home",
 
-    preliminaryPool: [],
-    preliminaryPage: 0,
-    preliminarySelected: [],
+    preliminaryPool:[],
+    preliminaryPage:0,
+    preliminarySelected:[],
 
-    narrowPool: [],
-    narrowSelected: [],
-    narrowTarget: 20,
-    narrowRound: 0,
+    narrowPool:[],
+    narrowSelected:[],
+    narrowRound:0,
 
-    rankPool: [],
-    ranked: [],
-    insertIndex: 0,
-    low: 0,
-    high: 0,
-    currentMiddle: 0,
+    rankPool:[],
+    ranked:[],
+    insertIndex:0,
+    low:0,
+    high:0,
+    currentMiddle:0,
 
-    result: []
+    result:[]
   };
 }
 
 
-function saveState() {
-  localStorage.setItem(
-    SAVE_KEY,
-    JSON.stringify(state)
-  );
+function saveState(){
+  localStorage.setItem(SAVE_KEY,JSON.stringify(state));
 }
 
 
-function clearSavedState() {
+function clearSavedState(){
   localStorage.removeItem(SAVE_KEY);
 }
 
 
-function shuffle(array) {
-  const copy = [...array];
+function shuffle(array){
+  const copy=[...array];
 
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
+  for(let i=copy.length-1;i>0;i--){
+    const j=Math.floor(Math.random()*(i+1));
+    [copy[i],copy[j]]=[copy[j],copy[i]];
   }
 
   return copy;
 }
 
 
-function memberById(id) {
-  return members.find(member => member.id === id);
+function memberById(id){
+  return members.find(member=>member.id===id);
 }
 
 
-function flowerHTML(className = "") {
-  return `
-    <div class="mini-flower ${className}">
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
-      <i></i>
+/* =========================
+   ステップ
+========================= */
+
+function currentStep(){
+
+  if(state.stage==="preliminary") return 1;
+  if(state.stage==="narrow") return 2;
+  if(state.stage==="ranking") return 3;
+  if(state.stage==="result") return 4;
+
+  return 0;
+}
+
+
+function renderSteps(){
+
+  if(state.stage==="home"){
+    steps.innerHTML="";
+    return;
+  }
+
+  const current=currentStep();
+
+  const labels=[
+    "予選",
+    "20人",
+    "順位",
+    "結果"
+  ];
+
+  steps.innerHTML=`
+    <div class="stepper">
+      ${labels.map((label,index)=>{
+        const number=index+1;
+
+        let className="";
+
+        if(number<current){
+          className="done";
+        }else if(number===current){
+          className="active";
+        }
+
+        return`
+          <div class="step ${className}">
+            <div class="step-circle">${number}</div>
+            <div class="step-label">${label}</div>
+          </div>
+        `;
+      }).join("")}
     </div>
   `;
 }
 
 
 /* =========================
-   描画
+   全体描画
 ========================= */
 
-function render() {
+function render(){
 
+  renderSteps();
   saveState();
 
-  if (state.stage === "home") {
+  if(state.stage==="home"){
     renderHome();
-    return;
-  }
-
-  if (state.stage === "preliminary") {
+  }else if(state.stage==="preliminary"){
     renderPreliminary();
-    return;
-  }
-
-  if (state.stage === "narrow") {
+  }else if(state.stage==="narrow"){
     renderNarrow();
-    return;
-  }
-
-  if (state.stage === "ranking") {
+  }else if(state.stage==="ranking"){
     renderRanking();
-    return;
-  }
-
-  if (state.stage === "result") {
+  }else if(state.stage==="result"){
     renderResult();
   }
 }
@@ -855,9 +896,9 @@ function render() {
    ホーム
 ========================= */
 
-function renderHome() {
+function renderHome(){
 
-  app.innerHTML = `
+  app.innerHTML=`
     <section class="panel home">
 
       <div class="home-flower">
@@ -886,10 +927,7 @@ function renderHome() {
         <span>TOP9</span>
       </div>
 
-      <button
-        class="primary-button"
-        onclick="startGame()"
-      >
+      <button class="primary-button" onclick="startGame()">
         はじめる
       </button>
 
@@ -898,68 +936,55 @@ function renderHome() {
 }
 
 
-function startGame() {
+function startGame(){
 
-  state = createInitialState();
+  state=createInitialState();
 
-  state.stage = "preliminary";
+  state.stage="preliminary";
 
-  state.preliminaryPool =
-    shuffle(
-      members.map(member => member.id)
-    );
+  state.preliminaryPool=
+    shuffle(members.map(member=>member.id));
 
   render();
 }
 
 
 /* =========================
-   最初の選択
+   予選
 ========================= */
 
-function renderPreliminary() {
+function renderPreliminary(){
 
-  const totalPages =
-    Math.ceil(
-      state.preliminaryPool.length /
-      PAGE_SIZE
-    );
+  const totalPages=
+    Math.ceil(state.preliminaryPool.length/PAGE_SIZE);
 
-  const start =
-    state.preliminaryPage *
-    PAGE_SIZE;
+  const start=
+    state.preliminaryPage*PAGE_SIZE;
 
-  const pageIds =
-    state.preliminaryPool.slice(
-      start,
-      start + PAGE_SIZE
-    );
+  const pageIds=
+    state.preliminaryPool.slice(start,start+PAGE_SIZE);
 
-  const progress =
-    ((state.preliminaryPage + 1) / totalPages) * 100;
+  const progress=
+    ((state.preliminaryPage+1)/totalPages)*100;
 
-  app.innerHTML = `
+
+  app.innerHTML=`
     <div class="progress-wrap">
 
       <div class="progress-info">
         <span>好きな顔を選ぶ</span>
-        <span>${state.preliminaryPage + 1} / ${totalPages}</span>
+        <span>${state.preliminaryPage+1} / ${totalPages}</span>
       </div>
 
       <div class="progress-track">
-        <div
-          class="progress-bar"
-          style="width:${progress}%"
-        ></div>
+        <div class="progress-bar" style="width:${progress}%"></div>
       </div>
 
     </div>
 
     <section class="panel">
 
-      <h2 class="stage-title">
-        好きな人を選んでね
-      </h2>
+      <h2 class="stage-title">好きな人を選んでね</h2>
 
       <p class="stage-subtitle">
         何人選んでもOK
@@ -967,16 +992,14 @@ function renderPreliminary() {
 
       <div class="member-grid">
 
-        ${pageIds.map(id => {
+        ${pageIds.map(id=>{
 
-          const member = memberById(id);
+          const member=memberById(id);
+          const selected=state.preliminarySelected.includes(id);
 
-          const selected =
-            state.preliminarySelected.includes(id);
-
-          return `
+          return`
             <div
-              class="member-card ${selected ? "selected" : ""}"
+              class="member-card ${selected?"selected":""}"
               onclick="togglePreliminary(${id})"
             >
 
@@ -986,8 +1009,12 @@ function renderPreliminary() {
                 alt="${member.name}"
               >
 
-              <div class="selected-mark">
-                <i></i><i></i><i></i><i></i><i></i>
+              <div class="selected-flower">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
 
               <div class="member-name">
@@ -1007,16 +1034,28 @@ function renderPreliminary() {
           現在 ${state.preliminarySelected.length}人 選択中
         </div>
 
-        <button
-          class="primary-button"
-          onclick="nextPreliminary()"
-        >
-          ${
-            state.preliminaryPage === totalPages - 1
-              ? "選択を決定"
-              : "次へ"
-          }
-        </button>
+        <div class="button-row">
+
+          <button
+            class="secondary-button"
+            onclick="previousPreliminary()"
+            ${state.preliminaryPage===0?"disabled":""}
+          >
+            前へ
+          </button>
+
+          <button
+            class="primary-button"
+            onclick="nextPreliminary()"
+          >
+            ${
+              state.preliminaryPage===totalPages-1
+              ?"選択を決定"
+              :"次へ"
+            }
+          </button>
+
+        </div>
 
       </div>
 
@@ -1025,16 +1064,16 @@ function renderPreliminary() {
 }
 
 
-function togglePreliminary(id) {
+function togglePreliminary(id){
 
-  if (state.preliminarySelected.includes(id)) {
+  if(state.preliminarySelected.includes(id)){
 
-    state.preliminarySelected =
+    state.preliminarySelected=
       state.preliminarySelected.filter(
-        selectedId => selectedId !== id
+        selectedId=>selectedId!==id
       );
 
-  } else {
+  }else{
 
     state.preliminarySelected.push(id);
 
@@ -1045,41 +1084,43 @@ function togglePreliminary(id) {
 }
 
 
-function nextPreliminary() {
+function previousPreliminary(){
 
-  const totalPages =
-    Math.ceil(
-      state.preliminaryPool.length /
-      PAGE_SIZE
-    );
+  if(state.preliminaryPage>0){
+    state.preliminaryPage--;
+    render();
+  }
+}
 
-  if (
-    state.preliminaryPage <
-    totalPages - 1
-  ) {
+
+function nextPreliminary(){
+
+  const totalPages=
+    Math.ceil(state.preliminaryPool.length/PAGE_SIZE);
+
+
+  if(state.preliminaryPage<totalPages-1){
 
     state.preliminaryPage++;
-
     render();
     return;
+
   }
 
 
-  const selected =
-    [...state.preliminarySelected];
-
-
-  if (selected.length < FINAL_COUNT) {
+  if(state.preliminarySelected.length<FINAL_COUNT){
 
     alert(
-      "TOP9を作るため、9人以上選んでね！"
+      `現在${state.preliminarySelected.length}人です。TOP9を作るため、9人以上選んでね！前へ戻って追加できます。`
     );
 
     return;
   }
 
 
-  beginNarrowing(selected);
+  beginNarrowing(
+    [...state.preliminarySelected]
+  );
 }
 
 
@@ -1087,83 +1128,61 @@ function nextPreliminary() {
    20人まで絞る
 ========================= */
 
-function beginNarrowing(ids) {
+function beginNarrowing(ids){
 
-  if (ids.length > 20) {
+  if(ids.length>20){
 
-    state.stage = "narrow";
-
-    state.narrowPool =
-      shuffle(ids);
-
-    state.narrowSelected = [];
-
-    state.narrowTarget = 20;
-
-    state.narrowRound = 0;
+    state.stage="narrow";
+    state.narrowPool=shuffle(ids);
+    state.narrowSelected=[];
+    state.narrowRound=0;
 
     render();
     return;
   }
 
 
-  /*
-    20人以下なら
-    9人選択画面には行かない。
-    そのまま2択へ。
-  */
-
   startRanking(ids);
 }
 
 
-function renderNarrow() {
+function renderNarrow(){
 
-  const start =
-    state.narrowRound *
-    NARROW_SIZE;
+  const start=
+    state.narrowRound*NARROW_SIZE;
 
-  const pageIds =
+  const pageIds=
     state.narrowPool.slice(
       start,
-      start + NARROW_SIZE
+      start+NARROW_SIZE
     );
 
-  if (pageIds.length === 0) {
+  if(pageIds.length===0){
     finishNarrowing();
     return;
   }
 
 
-  const totalRounds =
-    Math.ceil(
-      state.narrowPool.length /
-      NARROW_SIZE
-    );
+  const totalRounds=
+    Math.ceil(state.narrowPool.length/NARROW_SIZE);
 
-  const progress =
-    ((state.narrowRound + 1) / totalRounds) * 100;
+  const progress=
+    ((state.narrowRound+1)/totalRounds)*100;
 
-  const remaining =
-    Math.max(
-      0,
-      20 - state.narrowSelected.length
-    );
+  const remaining=
+    Math.max(0,20-state.narrowSelected.length);
 
 
-  app.innerHTML = `
+  app.innerHTML=`
     <div class="progress-wrap">
 
       <div class="progress-info">
         <span>20人まで絞る</span>
-        <span>${state.narrowRound + 1} / ${totalRounds}</span>
+        <span>${state.narrowRound+1} / ${totalRounds}</span>
       </div>
 
       <div class="progress-track">
-        <div
-          class="progress-bar"
-          style="width:${progress}%"
-        ></div>
+        <div class="progress-bar" style="width:${progress}%"></div>
       </div>
 
     </div>
@@ -1180,16 +1199,14 @@ function renderNarrow() {
 
       <div class="member-grid">
 
-        ${pageIds.map(id => {
+        ${pageIds.map(id=>{
 
-          const member = memberById(id);
+          const member=memberById(id);
+          const selected=state.narrowSelected.includes(id);
 
-          const selected =
-            state.narrowSelected.includes(id);
-
-          return `
+          return`
             <div
-              class="member-card ${selected ? "selected" : ""}"
+              class="member-card ${selected?"selected":""}"
               onclick="toggleNarrow(${id})"
             >
 
@@ -1199,8 +1216,12 @@ function renderNarrow() {
                 alt="${member.name}"
               >
 
-              <div class="selected-mark">
-                <i></i><i></i><i></i><i></i><i></i>
+              <div class="selected-flower">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
               </div>
 
               <div class="member-name">
@@ -1220,16 +1241,28 @@ function renderNarrow() {
           ${state.narrowSelected.length} / 20人
         </div>
 
-        <button
-          class="primary-button"
-          onclick="nextNarrowRound()"
-        >
-          ${
-            state.narrowRound === totalRounds - 1
-              ? "20人を決定"
-              : "次へ"
-          }
-        </button>
+        <div class="button-row">
+
+          <button
+            class="secondary-button"
+            onclick="previousNarrow()"
+            ${state.narrowRound===0?"disabled":""}
+          >
+            前へ
+          </button>
+
+          <button
+            class="primary-button"
+            onclick="nextNarrowRound()"
+          >
+            ${
+              state.narrowRound===totalRounds-1
+              ?"20人を決定"
+              :"次へ"
+            }
+          </button>
+
+        </div>
 
       </div>
 
@@ -1238,23 +1271,19 @@ function renderNarrow() {
 }
 
 
-function toggleNarrow(id) {
+function toggleNarrow(id){
 
-  if (state.narrowSelected.includes(id)) {
+  if(state.narrowSelected.includes(id)){
 
-    state.narrowSelected =
+    state.narrowSelected=
       state.narrowSelected.filter(
-        selectedId => selectedId !== id
+        selectedId=>selectedId!==id
       );
 
-  } else {
+  }else{
 
-    if (state.narrowSelected.length >= 20) {
-
-      alert(
-        "選べるのは20人までです"
-      );
-
+    if(state.narrowSelected.length>=20){
+      alert("選べるのは20人までです");
       return;
     }
 
@@ -1267,23 +1296,27 @@ function toggleNarrow(id) {
 }
 
 
-function nextNarrowRound() {
+function previousNarrow(){
 
-  const totalRounds =
-    Math.ceil(
-      state.narrowPool.length /
-      NARROW_SIZE
-    );
+  if(state.narrowRound>0){
+    state.narrowRound--;
+    render();
+  }
+}
 
-  if (
-    state.narrowRound <
-    totalRounds - 1
-  ) {
+
+function nextNarrowRound(){
+
+  const totalRounds=
+    Math.ceil(state.narrowPool.length/NARROW_SIZE);
+
+
+  if(state.narrowRound<totalRounds-1){
 
     state.narrowRound++;
-
     render();
     return;
+
   }
 
 
@@ -1291,92 +1324,66 @@ function nextNarrowRound() {
 }
 
 
-function finishNarrowing() {
+function finishNarrowing(){
 
-  /*
-    ここは20人ちょうどにする。
-    9人に絞る処理は入れない。
-  */
-
-  if (state.narrowSelected.length !== 20) {
+  if(state.narrowSelected.length!==20){
 
     alert(
-      "20人選んでね！"
+      `現在${state.narrowSelected.length}人です。20人選んでね！前へ戻って追加できます。`
     );
 
-    state.narrowRound = 0;
-
-    render();
     return;
   }
 
 
   startRanking(
-    state.narrowSelected
+    [...state.narrowSelected]
   );
 }
 
 
 /* =========================
-   20人から2択
+   順位決定
 ========================= */
 
-function startRanking(ids) {
+function startRanking(ids){
 
-  if (ids.length < FINAL_COUNT) {
-
-    alert(
-      "TOP9を作るには9人以上必要です"
-    );
-
+  if(ids.length<FINAL_COUNT){
+    alert("TOP9を作るには9人以上必要です");
     return;
   }
 
 
-  state.stage = "ranking";
-
-  state.rankPool =
-    shuffle(ids);
-
-  state.ranked =
-    [state.rankPool[0]];
-
-  state.insertIndex = 1;
+  state.stage="ranking";
+  state.rankPool=shuffle(ids);
+  state.ranked=[state.rankPool[0]];
+  state.insertIndex=1;
 
   prepareInsertion();
 }
 
 
-function prepareInsertion() {
+function prepareInsertion(){
 
-  if (
-    state.insertIndex >=
-    state.rankPool.length
-  ) {
-
+  if(state.insertIndex>=state.rankPool.length){
     finishRanking();
     return;
   }
 
-
-  state.low = 0;
-
-  state.high =
-    state.ranked.length;
+  state.low=0;
+  state.high=state.ranked.length;
 
   render();
 }
 
 
-function renderRanking() {
+function renderRanking(){
 
-  const candidateId =
-    state.rankPool[
-      state.insertIndex
-    ];
+  const candidateId=
+    state.rankPool[state.insertIndex];
 
 
-  if (state.low >= state.high) {
+  if(state.low>=state.high){
 
     state.ranked.splice(
       state.low,
@@ -1387,53 +1394,42 @@ function renderRanking() {
     state.insertIndex++;
 
     prepareInsertion();
-
     return;
   }
 
 
-  const middle =
+  const middle=
     Math.floor(
-      (state.low + state.high) / 2
+      (state.low+state.high)/2
     );
 
 
-  const opponentId =
+  state.currentMiddle=middle;
+
+
+  const opponentId=
     state.ranked[middle];
 
-
-  const candidate =
+  const candidate=
     memberById(candidateId);
 
-  const opponent =
+  const opponent=
     memberById(opponentId);
 
-
-  const progress =
-    (
-      state.insertIndex /
-      state.rankPool.length
-    ) * 100;
+  const progress=
+    (state.insertIndex/state.rankPool.length)*100;
 
 
-  state.currentMiddle = middle;
-
-
-  app.innerHTML = `
+  app.innerHTML=`
     <div class="progress-wrap">
 
       <div class="progress-info">
         <span>2択で順位決定</span>
-        <span>
-          ${state.insertIndex + 1} / ${state.rankPool.length}
-        </span>
+        <span>${state.insertIndex+1} / ${state.rankPool.length}</span>
       </div>
 
       <div class="progress-track">
-        <div
-          class="progress-bar"
-          style="width:${progress}%"
-        ></div>
+        <div class="progress-bar" style="width:${progress}%"></div>
       </div>
 
     </div>
@@ -1444,17 +1440,12 @@ function renderRanking() {
         どっちが好き？
       </h2>
 
-      <div class="compare-decoration">
-        ${flowerHTML()}
-      </div>
-
       <div class="compare-grid">
 
         <div
           class="compare-card"
           onclick="chooseComparison('candidate')"
         >
-
           <img
             class="compare-photo"
             src="${candidate.image}"
@@ -1464,7 +1455,6 @@ function renderRanking() {
           <div class="compare-name">
             ${candidate.name}
           </div>
-
         </div>
 
 
@@ -1472,7 +1462,6 @@ function renderRanking() {
           class="compare-card"
           onclick="chooseComparison('opponent')"
         >
-
           <img
             class="compare-photo"
             src="${opponent.image}"
@@ -1482,7 +1471,6 @@ function renderRanking() {
           <div class="compare-name">
             ${opponent.name}
           </div>
-
         </div>
 
       </div>
@@ -1494,41 +1482,26 @@ function renderRanking() {
 }
 
 
-function chooseComparison(choice) {
+function chooseComparison(choice){
 
-  const middle =
-    state.currentMiddle;
+  const middle=state.currentMiddle;
 
-
-  if (choice === "candidate") {
-
-    state.high =
-      middle;
-
-  } else {
-
-    state.low =
-      middle + 1;
-
+  if(choice==="candidate"){
+    state.high=middle;
+  }else{
+    state.low=middle+1;
   }
-
 
   renderRanking();
 }
 
 
-function finishRanking() {
+function finishRanking(){
 
-  /*
-    20人全員を順位付けしたあと
-    上位9人だけ結果へ。
-  */
+  state.result=
+    [...state.ranked].slice(0,FINAL_COUNT);
 
-  state.result =
-    [...state.ranked]
-      .slice(0, FINAL_COUNT);
-
-  state.stage = "result";
+  state.stage="result";
 
   render();
 }
@@ -1538,60 +1511,65 @@ function finishRanking() {
    結果
 ========================= */
 
-function renderResult() {
+function rankColor(index){
 
-  app.innerHTML = `
+  const colors=[
+    "#d7a82d",
+    "#a9afb3",
+    "#bb7957",
+    "#df7099",
+    "#e48cab",
+    "#d8618c",
+    "#ee9db8",
+    "#c96e91",
+    "#e385a6"
+  ];
+
+  return colors[index]||"#df7099";
+}
+
+
+function renderResult(){
+
+  app.innerHTML=`
     <section class="panel">
 
       <div class="result-heading">
-
-        <h2>
-          花組 好き顔9選
-        </h2>
-
+        <h2>花組 好き顔9選</h2>
         <div class="result-decoration"></div>
-
       </div>
-
 
       <div class="result-grid">
 
-        ${state.result.map(
-          (id,index) => {
+        ${state.result.map((id,index)=>{
 
-            const member =
-              memberById(id);
+          const member=memberById(id);
 
-            return `
-              <div class="result-card">
+          return`
+            <div class="result-card">
 
-                <div
-                  class="rank-badge"
-                  style="
-                    background:
-                    ${rankColor(index)}
-                  "
-                >
-                  ${index + 1}
-                </div>
-
-                <img
-                  src="${member.image}"
-                  alt="${member.name}"
-                >
-
-                <div class="result-name">
-                  ${member.name}
-                </div>
-
+              <div
+                class="rank-badge"
+                style="background:${rankColor(index)}"
+              >
+                ${index+1}
               </div>
-            `;
 
-          }
-        ).join("")}
+              <img
+                src="${member.image}"
+                alt="${member.name}"
+              >
+
+              <div class="result-name">
+                ${member.name}
+              </div>
+
+            </div>
+          `;
+
+        }).join("")}
 
       </div>
-
 
       <div class="result-buttons">
 
@@ -1616,191 +1594,82 @@ function renderResult() {
 }
 
 
-function rankColor(index) {
-
-  const colors = [
-    "#d7a82d",
-    "#a9afb3",
-    "#bb7957",
-    "#df7099",
-    "#e48cab",
-    "#d8618c",
-    "#ee9db8",
-    "#c96e91",
-    "#e385a6"
-  ];
-
-  return colors[index] || "#df7099";
-}
-
-
-function restartGame() {
-
+function restartGame(){
   clearSavedState();
-
-  state =
-    createInitialState();
-
+  state=createInitialState();
   render();
 }
 
 
-/* =========================
-   Canvas共通
-========================= */
+/* ==================================================
+   ここから下は保存画像
+   前の気に入ってくれたデザインを維持
+================================================== */
 
-function roundedRect(
-  ctx,
-  x,
-  y,
-  width,
-  height,
-  radius
-) {
+function roundedRect(ctx,x,y,width,height,radius){
 
-  const r =
-    Math.min(
-      radius,
-      width / 2,
-      height / 2
-    );
+  const r=Math.min(radius,width/2,height/2);
 
   ctx.beginPath();
-
-  ctx.moveTo(
-    x + r,
-    y
-  );
-
-  ctx.arcTo(
-    x + width,
-    y,
-    x + width,
-    y + height,
-    r
-  );
-
-  ctx.arcTo(
-    x + width,
-    y + height,
-    x,
-    y + height,
-    r
-  );
-
-  ctx.arcTo(
-    x,
-    y + height,
-    x,
-    y,
-    r
-  );
-
-  ctx.arcTo(
-    x,
-    y,
-    x + width,
-    y,
-    r
-  );
-
+  ctx.moveTo(x+r,y);
+  ctx.arcTo(x+width,y,x+width,y+height,r);
+  ctx.arcTo(x+width,y+height,x,y+height,r);
+  ctx.arcTo(x,y+height,x,y,r);
+  ctx.arcTo(x,y,x+width,y,r);
   ctx.closePath();
 }
 
 
-function loadImage(src) {
+function loadImage(src){
 
-  return new Promise(
-    (resolve,reject) => {
+  return new Promise((resolve,reject)=>{
 
-      const image =
-        new Image();
+    const image=new Image();
 
-      image.onload =
-        () => resolve(image);
+    image.onload=()=>resolve(image);
+    image.onerror=reject;
+    image.src=src;
 
-      image.onerror =
-        reject;
-
-      image.src =
-        src;
-
-    }
-  );
+  });
 }
 
 
-/*
-  縦長の写真枠へ
-  引き伸ばさずにトリミングする
-*/
+function drawCover(ctx,image,x,y,width,height){
 
-function drawCover(
-  ctx,
-  image,
-  x,
-  y,
-  width,
-  height
-) {
+  const imageRatio=image.width/image.height;
+  const boxRatio=width/height;
 
-  const imageRatio =
-    image.width / image.height;
-
-  const boxRatio =
-    width / height;
+  let sx=0;
+  let sy=0;
+  let sw=image.width;
+  let sh=image.height;
 
 
-  let sx = 0;
-  let sy = 0;
-  let sw = image.width;
-  let sh = image.height;
+  if(imageRatio>boxRatio){
 
+    sw=image.height*boxRatio;
+    sx=(image.width-sw)/2;
 
-  if (imageRatio > boxRatio) {
+  }else{
 
-    sw =
-      image.height * boxRatio;
+    sh=image.width/boxRatio;
+    sy=(image.height-sh)*.20;
 
-    sx =
-      (image.width - sw) / 2;
+    if(sy<0) sy=0;
 
-  } else {
-
-    sh =
-      image.width / boxRatio;
-
-    sy =
-      (image.height - sh) * .20;
-
-    if (sy < 0) {
-      sy = 0;
+    if(sy+sh>image.height){
+      sy=image.height-sh;
     }
-
-    if (sy + sh > image.height) {
-      sy = image.height - sh;
-    }
-
   }
 
 
   ctx.drawImage(
     image,
-    sx,
-    sy,
-    sw,
-    sh,
-    x,
-    y,
-    width,
-    height
+    sx,sy,sw,sh,
+    x,y,width,height
   );
 }
 
-
-/* =========================
-   Canvasで花を描く
-========================= */
 
 function drawFlower(
   ctx,
@@ -1808,45 +1677,39 @@ function drawFlower(
   y,
   size,
   color,
-  opacity = 1,
-  rotation = 0
-) {
+  opacity=1,
+  rotation=0
+){
 
   ctx.save();
 
-  ctx.globalAlpha =
-    opacity;
-
+  ctx.globalAlpha=opacity;
   ctx.translate(x,y);
-
   ctx.rotate(rotation);
-
-  ctx.fillStyle =
-    color;
+  ctx.fillStyle=color;
 
 
-  for (let i = 0; i < 5; i++) {
+  for(let i=0;i<5;i++){
 
     ctx.save();
 
     ctx.rotate(
-      (Math.PI * 2 / 5) * i
+      (Math.PI*2/5)*i
     );
 
     ctx.beginPath();
 
     ctx.ellipse(
       0,
-      -size * .48,
-      size * .28,
-      size * .48,
+      -size*.48,
+      size*.28,
+      size*.48,
       0,
       0,
-      Math.PI * 2
+      Math.PI*2
     );
 
     ctx.fill();
-
     ctx.restore();
   }
 
@@ -1856,137 +1719,53 @@ function drawFlower(
   ctx.arc(
     0,
     0,
-    size * .16,
+    size*.16,
     0,
-    Math.PI * 2
+    Math.PI*2
   );
 
-  ctx.fillStyle =
-    "#f5d1dc";
-
+  ctx.fillStyle="#f5d1dc";
   ctx.fill();
 
   ctx.restore();
 }
 
 
-/* =========================
-   保存用結果画像
-========================= */
+async function makeResultCanvas(){
 
-async function makeResultCanvas() {
+  const canvas=document.createElement("canvas");
 
-  const canvas =
-    document.createElement(
-      "canvas"
-    );
+  canvas.width=1080;
+  canvas.height=1700;
 
-  /*
-    縦長画像
-  */
-
-  canvas.width = 1080;
-  canvas.height = 1700;
+  const ctx=canvas.getContext("2d");
 
 
-  const ctx =
-    canvas.getContext("2d");
-
-
-  /* 背景 */
-
-  const gradient =
+  const gradient=
     ctx.createLinearGradient(
-      0,
-      0,
-      0,
-      1700
+      0,0,0,1700
     );
 
+  gradient.addColorStop(0,"#fffdfd");
+  gradient.addColorStop(.5,"#fff6f9");
+  gradient.addColorStop(1,"#ffeaf2");
 
-  gradient.addColorStop(
-    0,
-    "#fffdfd"
-  );
-
-  gradient.addColorStop(
-    .5,
-    "#fff6f9"
-  );
-
-  gradient.addColorStop(
-    1,
-    "#ffeaf2"
-  );
-
-
-  ctx.fillStyle =
-    gradient;
+  ctx.fillStyle=gradient;
 
   ctx.fillRect(
-    0,
-    0,
-    1080,
-    1700
+    0,0,1080,1700
   );
 
 
-  /*
-    背景のお花
-    絵文字ではなくCanvas描画
-  */
-
-  drawFlower(
-    ctx,
-    35,
-    95,
-    105,
-    "#e889aa",
-    .16,
-    -.25
-  );
-
-  drawFlower(
-    ctx,
-    1040,
-    145,
-    125,
-    "#ef9db9",
-    .17,
-    .25
-  );
-
-  drawFlower(
-    ctx,
-    25,
-    1510,
-    125,
-    "#efa2bc",
-    .17,
-    -.2
-  );
-
-  drawFlower(
-    ctx,
-    1050,
-    1545,
-    105,
-    "#e68aaa",
-    .15,
-    .3
-  );
+  drawFlower(ctx,35,95,105,"#e889aa",.16,-.25);
+  drawFlower(ctx,1040,145,125,"#ef9db9",.17,.25);
+  drawFlower(ctx,25,1510,125,"#efa2bc",.17,-.2);
+  drawFlower(ctx,1050,1545,105,"#e68aaa",.15,.3);
 
 
-  /* 英字 */
-
-  ctx.textAlign =
-    "center";
-
-  ctx.fillStyle =
-    "#bd758f";
-
-  ctx.font =
-    '700 25px Georgia, serif';
+  ctx.textAlign="center";
+  ctx.fillStyle="#bd758f";
+  ctx.font='700 25px Georgia, serif';
 
   ctx.fillText(
     "H A N A - G U M I   T O P   9",
@@ -1995,13 +1774,8 @@ async function makeResultCanvas() {
   );
 
 
-  /* タイトル */
-
-  ctx.fillStyle =
-    "#553640";
-
-  ctx.font =
-    '900 64px -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif';
+  ctx.fillStyle="#553640";
+  ctx.font='900 64px -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif';
 
   ctx.fillText(
     "花組 好き顔9選",
@@ -2010,36 +1784,14 @@ async function makeResultCanvas() {
   );
 
 
-  /* タイトル下 */
-
-  ctx.strokeStyle =
-    "#e7a4bb";
-
-  ctx.lineWidth =
-    2;
+  ctx.strokeStyle="#e7a4bb";
+  ctx.lineWidth=2;
 
   ctx.beginPath();
-
-  ctx.moveTo(
-    235,
-    218
-  );
-
-  ctx.lineTo(
-    470,
-    218
-  );
-
-  ctx.moveTo(
-    610,
-    218
-  );
-
-  ctx.lineTo(
-    845,
-    218
-  );
-
+  ctx.moveTo(235,218);
+  ctx.lineTo(470,218);
+  ctx.moveTo(610,218);
+  ctx.lineTo(845,218);
   ctx.stroke();
 
 
@@ -2054,116 +1806,72 @@ async function makeResultCanvas() {
   );
 
 
-  /* =====================
-     3×3カード
-  ===================== */
+  const marginX=55;
+  const gapX=25;
+  const gapY=30;
 
-  const marginX = 55;
-  const gapX = 25;
-  const gapY = 30;
+  const cardWidth=
+    (1080-marginX*2-gapX*2)/3;
 
-  const cardWidth =
-    (
-      1080 -
-      marginX * 2 -
-      gapX * 2
-    ) / 3;
+  const cardHeight=405;
+  const startY=275;
+  const photoMargin=12;
 
-  const cardHeight = 405;
+  const photoWidth=
+    cardWidth-photoMargin*2;
 
-  const startY = 275;
-
-  const photoMargin = 12;
-
-  const photoWidth =
-    cardWidth -
-    photoMargin * 2;
-
-  /*
-    写真枠は縦長固定
-  */
-
-  const photoHeight = 305;
+  const photoHeight=305;
 
 
-  for (
-    let index = 0;
-    index < state.result.length;
+  for(
+    let index=0;
+    index<state.result.length;
     index++
-  ) {
+  ){
 
-    const member =
+    const member=
       memberById(
         state.result[index]
       );
 
+    const column=index%3;
+    const row=Math.floor(index/3);
 
-    const column =
-      index % 3;
+    const x=
+      marginX+
+      column*(cardWidth+gapX);
 
-    const row =
-      Math.floor(
-        index / 3
-      );
+    const y=
+      startY+
+      row*(cardHeight+gapY);
 
-
-    const x =
-      marginX +
-      column *
-      (
-        cardWidth +
-        gapX
-      );
-
-
-    const y =
-      startY +
-      row *
-      (
-        cardHeight +
-        gapY
-      );
-
-
-    /* カード影 */
 
     ctx.save();
 
-    ctx.shadowColor =
+    ctx.shadowColor=
       "rgba(172,82,117,.14)";
 
-    ctx.shadowBlur =
-      22;
-
-    ctx.shadowOffsetY =
-      9;
-
-    ctx.fillStyle =
-      "#ffffff";
+    ctx.shadowBlur=22;
+    ctx.shadowOffsetY=9;
+    ctx.fillStyle="#ffffff";
 
     roundedRect(
       ctx,
-      x,
-      y,
+      x,y,
       cardWidth,
       cardHeight,
       23
     );
 
     ctx.fill();
-
     ctx.restore();
 
 
-    /* 白カード */
-
-    ctx.fillStyle =
-      "#ffffff";
+    ctx.fillStyle="#ffffff";
 
     roundedRect(
       ctx,
-      x,
-      y,
+      x,y,
       cardWidth,
       cardHeight,
       23
@@ -2172,22 +1880,19 @@ async function makeResultCanvas() {
     ctx.fill();
 
 
-    /* 縦長写真 */
+    try{
 
-    try {
-
-      const image =
+      const image=
         await loadImage(
           member.image
         );
-
 
       ctx.save();
 
       roundedRect(
         ctx,
-        x + photoMargin,
-        y + photoMargin,
+        x+photoMargin,
+        y+photoMargin,
         photoWidth,
         photoHeight,
         15
@@ -2195,34 +1900,24 @@ async function makeResultCanvas() {
 
       ctx.clip();
 
-
       drawCover(
         ctx,
         image,
-        x + photoMargin,
-        y + photoMargin,
+        x+photoMargin,
+        y+photoMargin,
         photoWidth,
         photoHeight
       );
 
-
       ctx.restore();
 
-    } catch(error) {
-
+    }catch(error){
       console.error(error);
-
     }
 
 
-    /* 順位 */
-
-    const rankX =
-      x + 13;
-
-    const rankY =
-      y + 20;
-
+    const rankX=x+13;
+    const rankY=y+20;
 
     ctx.beginPath();
 
@@ -2231,101 +1926,49 @@ async function makeResultCanvas() {
       rankY,
       36,
       0,
-      Math.PI * 2
+      Math.PI*2
     );
 
-
-    ctx.fillStyle =
-      rankColor(index);
-
+    ctx.fillStyle=rankColor(index);
     ctx.fill();
 
-
-    ctx.lineWidth = 4;
-
-    ctx.strokeStyle =
-      "#ffffff";
-
+    ctx.lineWidth=4;
+    ctx.strokeStyle="#ffffff";
     ctx.stroke();
 
-
-    ctx.fillStyle =
-      "#ffffff";
-
-    ctx.textAlign =
-      "center";
-
-    ctx.font =
-      '900 31px -apple-system, sans-serif';
-
+    ctx.fillStyle="#ffffff";
+    ctx.textAlign="center";
+    ctx.font='900 31px -apple-system, sans-serif';
 
     ctx.fillText(
-      String(index + 1),
+      String(index+1),
       rankX,
-      rankY + 11
+      rankY+11
     );
 
 
-    /*
-      組名は入れない。
-      名前だけ。
-    */
-
-    ctx.fillStyle =
-      "#533a43";
-
-    ctx.textAlign =
-      "center";
-
-    ctx.font =
-      '900 28px -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif';
-
+    ctx.fillStyle="#533a43";
+    ctx.textAlign="center";
+    ctx.font='900 28px -apple-system, BlinkMacSystemFont, "Yu Gothic", sans-serif';
 
     ctx.fillText(
       member.name,
-      x + cardWidth / 2,
-      y + 366
+      x+cardWidth/2,
+      y+366
     );
-
   }
 
 
-  /* =====================
-     フッター
-  ===================== */
+  const footerY=1600;
 
-  const footerY =
-    1600;
-
-
-  ctx.strokeStyle =
-    "#e7a4bb";
-
-  ctx.lineWidth =
-    2;
+  ctx.strokeStyle="#e7a4bb";
+  ctx.lineWidth=2;
 
   ctx.beginPath();
-
-  ctx.moveTo(
-    270,
-    footerY
-  );
-
-  ctx.lineTo(
-    470,
-    footerY
-  );
-
-  ctx.moveTo(
-    610,
-    footerY
-  );
-
-  ctx.lineTo(
-    810,
-    footerY
-  );
-
+  ctx.moveTo(270,footerY);
+  ctx.lineTo(470,footerY);
+  ctx.moveTo(610,footerY);
+  ctx.lineTo(810,footerY);
   ctx.stroke();
 
 
@@ -2340,31 +1983,22 @@ async function makeResultCanvas() {
   );
 
 
-  const today =
+  const today=
     new Date()
       .toLocaleDateString(
         "ja-JP",
         {
-          year: "numeric",
-          month: "2-digit",
-          day: "2-digit"
+          year:"numeric",
+          month:"2-digit",
+          day:"2-digit"
         }
       )
-      .replaceAll(
-        "/",
-        "."
-      );
+      .replaceAll("/", ".");
 
 
-  ctx.fillStyle =
-    "#b5778e";
-
-  ctx.textAlign =
-    "center";
-
-  ctx.font =
-    '500 23px Georgia, serif';
-
+  ctx.fillStyle="#b5778e";
+  ctx.textAlign="center";
+  ctx.font='500 23px Georgia, serif';
 
   ctx.fillText(
     today,
@@ -2378,182 +2012,132 @@ async function makeResultCanvas() {
 
 
 /* =========================
-   保存画像を表示
+   保存・共有
 ========================= */
 
-let latestCanvas = null;
+let latestCanvas=null;
 
 
-async function showSaveImage() {
+async function showSaveImage(){
 
-  try {
+  try{
 
-    latestCanvas =
+    latestCanvas=
       await makeResultCanvas();
 
-
-    const image =
+    const image=
       document.getElementById(
         "generatedImage"
       );
 
-
-    image.src =
+    image.src=
       latestCanvas.toDataURL(
         "image/png"
       );
 
-
     document
-      .getElementById(
-        "imageModal"
-      )
-      .classList.add(
-        "show"
-      );
+      .getElementById("imageModal")
+      .classList.add("show");
 
-  } catch(error) {
+  }catch(error){
 
     console.error(error);
 
     alert(
       "画像の作成に失敗しました"
     );
-
   }
 }
 
 
-/* =========================
-   iPhone保存・共有
-========================= */
-
 document
-  .getElementById(
-    "shareImageButton"
-  )
-  .addEventListener(
-    "click",
-    async () => {
+.getElementById("shareImageButton")
+.addEventListener(
+  "click",
+  async()=>{
 
-      if (!latestCanvas) {
-        return;
-      }
+    if(!latestCanvas) return;
 
 
-      latestCanvas.toBlob(
-        async blob => {
+    latestCanvas.toBlob(
+      async blob=>{
 
-          if (!blob) {
+        if(!blob) return;
+
+
+        const file=
+          new File(
+            [blob],
+            "hanagumi-top9.png",
+            {type:"image/png"}
+          );
+
+
+        if(
+          navigator.share &&
+          navigator.canShare &&
+          navigator.canShare({
+            files:[file]
+          })
+        ){
+
+          try{
+
+            await navigator.share({
+              files:[file],
+              title:"花組 好き顔9選"
+            });
+
             return;
-          }
 
+          }catch(error){
 
-          const file =
-            new File(
-              [blob],
-              "hanagumi-top9.png",
-              {
-                type: "image/png"
-              }
-            );
-
-
-          if (
-            navigator.share &&
-            navigator.canShare &&
-            navigator.canShare({
-              files: [file]
-            })
-          ) {
-
-            try {
-
-              await navigator.share({
-                files: [file],
-                title: "花組 好き顔9選"
-              });
-
+            if(error.name==="AbortError"){
               return;
-
-            } catch(error) {
-
-              if (
-                error.name ===
-                "AbortError"
-              ) {
-                return;
-              }
-
             }
           }
+        }
 
 
-          const url =
-            URL.createObjectURL(
-              blob
-            );
+        const url=
+          URL.createObjectURL(blob);
 
+        const link=
+          document.createElement("a");
 
-          const link =
-            document.createElement(
-              "a"
-            );
+        link.href=url;
+        link.download="hanagumi-top9.png";
 
+        document.body.appendChild(link);
 
-          link.href = url;
+        link.click();
+        link.remove();
 
-          link.download =
-            "hanagumi-top9.png";
+        setTimeout(
+          ()=>URL.revokeObjectURL(url),
+          1000
+        );
 
-
-          document.body.appendChild(
-            link
-          );
-
-          link.click();
-
-          link.remove();
-
-
-          setTimeout(
-            () => {
-              URL.revokeObjectURL(url);
-            },
-            1000
-          );
-
-        },
-        "image/png"
-      );
-
-    }
-  );
+      },
+      "image/png"
+    );
+  }
+);
 
 
 document
-  .getElementById(
-    "closeModalButton"
-  )
-  .addEventListener(
-    "click",
-    () => {
+.getElementById("closeModalButton")
+.addEventListener(
+  "click",
+  ()=>{
 
-      document
-        .getElementById(
-          "imageModal"
-        )
-        .classList.remove(
-          "show"
-        );
+    document
+      .getElementById("imageModal")
+      .classList.remove("show");
 
-    }
-  );
+  }
+);
 
-
-/* =========================
-   起動
-========================= */
 
 render();
 
